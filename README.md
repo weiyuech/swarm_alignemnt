@@ -40,6 +40,7 @@ python3 scripts/study2.py runs/study2                      # Study 2 (pre-regist
 python3 scripts/validate_reports.py runs/study2            # report-rule check (cached labels)
 python3 scripts/tables.py                                  # tables
 python3 scripts/main_figures.py && python3 scripts/figures.py   # figures
+python3 scripts/sample_justifications.py                   # sample of adopters' reasoning
 ```
 
 ## Run new episodes
@@ -60,4 +61,5 @@ python3 scripts/run_episode.py --topology ring --seed 1    # a single episode
 | `tests/` | Grader, isolation, source and Study 2 checks |
 
 Agent code never runs as Python: a whitelist interpreter evaluates it with step and size
-limits in a separate process. Agents have no shell, files or network.
+limits in a separate process, with no access to the shell, file system or network. Agents
+see the shared library and their notebook only as text in each turn's observation.
