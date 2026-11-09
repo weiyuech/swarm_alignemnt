@@ -41,6 +41,8 @@ python3 scripts/validate_reports.py runs/study2            # report-rule check (
 python3 scripts/tables.py                                  # tables
 python3 scripts/main_figures.py && python3 scripts/figures.py   # figures
 python3 scripts/sample_justifications.py                   # sample of adopters' reasoning
+python3 scripts/transfer.py                                # template reuse vs far transfer
+python3 scripts/check_routing.py                           # chat-routing check on Study 1 logs
 ```
 
 ## Run new episodes
